@@ -10,6 +10,7 @@ import {baseApi} from '../services/api';
 const persistConfig = {
   key: 'pokemon',
   storage: AsyncStorage,
+  blacklist: ['baseApi'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -17,7 +18,10 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({serializableCheck: false}).concat(baseApi.middleware),
+    getDefaultMiddleware({
+      serializableCheck: false,
+      immutableCheck: false,
+    }).concat(baseApi.middleware),
 });
 
 //* Infer the `RootState` and `AppDispatch` types from the store itself
