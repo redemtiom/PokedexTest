@@ -30,6 +30,5 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     letterSpacing: 0.5,
     textAlign: 'center',
-    //caretHidden: true,
   },
 });
