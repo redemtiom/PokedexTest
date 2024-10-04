@@ -3,7 +3,7 @@ import {View, Button, Text, TextInput, Alert} from 'react-native';
 
 import {useAppDispatch} from '../../../store/hooks';
 
-import LinearGradient from 'react-native-linear-gradient';
+import Gradient from '../../components/Gradient/gradient.component';
 
 import {styles} from './user.styles';
 
@@ -26,19 +26,7 @@ const UserScreen = ({navigation}) => {
   };
 
   return (
-    <LinearGradient
-      colors={[
-        '#C8EAE8',
-        '#B4E4E1',
-        '#A0DDD7',
-        '#6CD1CE',
-        '#4CC7C5',
-        '#21CBCA',
-      ]}
-      start={{x: 0.0, y: 0.5}}
-      end={{x: 1.0, y: 0.5}}
-      locations={[0.1, 0.2, 0.4, 0.8, 0.95, 1.0]}
-      style={styles.linearGradient}>
+      <Gradient>
       <View style={styles.container}>
         <Text style={styles.text}>Escribe tu nombre: </Text>
         <TextInput
@@ -55,7 +43,7 @@ const UserScreen = ({navigation}) => {
         />
         <Button onPress={handler} title="Aceptar" color="#841584" />
       </View>
-    </LinearGradient>
+    </Gradient>
   );
 };
 

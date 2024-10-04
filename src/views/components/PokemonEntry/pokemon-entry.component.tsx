@@ -19,7 +19,12 @@ const PokemonEntry = ({item}: {item: PokedexEntry; index: number}) => {
     name: item.name,
   });
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('PokemonDetail')}>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('PokemonDetail', {
+          pokemon: data,
+        })
+      }>
       <View style={styles.item}>
         {isLoading && (
           <View style={styles.imageContainer}>
