@@ -15,6 +15,10 @@ Aplicación de prueba para Bankaya.
 * [Nvm](https://github.com/nvm-sh/nvm)
 * [Sdkman](https://sdkman.io)
 
+## Capturas
+<img src="https://github.com/user-attachments/assets/16bcff49-0fff-4f8c-ab41-8f73bf2cd974" alt="Alt Text" width="200" height="400">
+<img src="https://github.com/user-attachments/assets/6855c43d-e075-4afa-a704-a5579cbfb68f" alt="Alt Text" width="200" height="400">
+
 ## Installation
 
 You need install the dependencies
