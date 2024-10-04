@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   item: {
     flexDirection: 'row',
-    backgroundColor: '#f9c2ff',
+    backgroundColor: 'transparent',
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
