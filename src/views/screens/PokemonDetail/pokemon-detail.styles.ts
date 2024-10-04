@@ -2,9 +2,15 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     paddingHorizontal: 16,
+  },
+  scrollContainer: {
+    width: '100%',
+  },
+  horizontalScrollContainer: {
+    height: 300,
   },
   imageContainer: {
     width: Dimensions.get('window').width * 0.8,
@@ -23,7 +29,6 @@ export const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'transparent',
     padding: 8,
-    //borderRadius: 15,
     borderColor: 'white',
     borderWidth: 2,
   },
@@ -48,7 +53,5 @@ export const styles = StyleSheet.create({
     letterSpacing: 1.5,
     fontFamily: 'Pokemon',
     textTransform: 'capitalize',
-    //textDecorationLine: 'underline',
-    //textDecorationColor: 'blue',
   },
 });

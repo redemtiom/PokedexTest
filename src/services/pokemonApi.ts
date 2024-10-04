@@ -2,6 +2,7 @@ import {baseApi} from './api';
 import {PokedexRequest, PokedexResponse} from '../types/api.types';
 import {PokemonResponse, PokemonRequest} from '../types/pokemon.types';
 import {SpeciesRequest, SpeciesResponse} from '../types/species.types';
+import {EncounterRequest, EncounterResponse} from '../types/encounter.types';
 
 export const pokemonApi = baseApi.injectEndpoints({
   endpoints: builder => ({
@@ -14,7 +15,15 @@ export const pokemonApi = baseApi.injectEndpoints({
     getPokemonSpecies: builder.query<SpeciesResponse, SpeciesRequest>({
       query: ({id}) => `pokemon-species/${id}`,
     }),
+    getPokemonEncounters: builder.query<EncounterResponse, EncounterRequest>({
+      query: ({id}) => `encounter-method/${id}`,
+    }),
   }),
 });
 
-export const {useGetPokemonByNameQuery, useGetPokedexQuery, useGetPokemonSpeciesQuery} = pokemonApi;
+export const {
+  useGetPokemonByNameQuery,
+  useGetPokedexQuery,
+  useGetPokemonSpeciesQuery,
+  useGetPokemonEncountersQuery,
+} = pokemonApi;
